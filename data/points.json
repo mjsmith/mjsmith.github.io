@@ -1,0 +1,145 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    172.6561355078316,
+                    -43.54203404972386,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Untitled Placemark",
+                "styleUrl": "#m_ylw-pushpin",
+                "styleHash": "-5bd746ca",
+                "styleMapHash": {
+                    "normal": "#s_ylw-pushpin",
+                    "highlight": "#s_ylw-pushpin_hl"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    172.6547380499906,
+                    -43.54090102293466,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Untitled Placemark",
+                "styleUrl": "#m_ylw-pushpin",
+                "styleHash": "-5bd746ca",
+                "styleMapHash": {
+                    "normal": "#s_ylw-pushpin",
+                    "highlight": "#s_ylw-pushpin_hl"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    172.6558400736101,
+                    -43.54274777471802,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Untitled Placemark",
+                "styleUrl": "#m_ylw-pushpin",
+                "styleHash": "-5bd746ca",
+                "styleMapHash": {
+                    "normal": "#s_ylw-pushpin",
+                    "highlight": "#s_ylw-pushpin_hl"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    172.6605895855157,
+                    -43.54194927945454,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Untitled Placemark",
+                "styleUrl": "#m_ylw-pushpin",
+                "styleHash": "-5bd746ca",
+                "styleMapHash": {
+                    "normal": "#s_ylw-pushpin",
+                    "highlight": "#s_ylw-pushpin_hl"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    172.6551905797899,
+                    -43.5441247366958,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Untitled Placemark",
+                "styleUrl": "#m_ylw-pushpin",
+                "styleHash": "-5bd746ca",
+                "styleMapHash": {
+                    "normal": "#s_ylw-pushpin",
+                    "highlight": "#s_ylw-pushpin_hl"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    172.656077618415,
+                    -43.54115334506932,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Untitled Placemark",
+                "styleUrl": "#m_ylw-pushpin",
+                "styleHash": "-5bd746ca",
+                "styleMapHash": {
+                    "normal": "#s_ylw-pushpin",
+                    "highlight": "#s_ylw-pushpin_hl"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    172.6555475527581,
+                    -43.54323249405933,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Untitled Placemark",
+                "styleUrl": "#m_ylw-pushpin",
+                "styleHash": "-5bd746ca",
+                "styleMapHash": {
+                    "normal": "#s_ylw-pushpin",
+                    "highlight": "#s_ylw-pushpin_hl"
+                }
+            }
+        }
+    ]
+}

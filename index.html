@@ -7,9 +7,15 @@
     <meta name="description" content="Mjsmith.GitHub.io : ">
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
-<script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+    <script language="JavaScript" type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.js"></script>
 
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.15/datatables.min.css"/>
+    
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.15/datatables.min.js"></script>
+        
     <title>Stadium environmental monitoring</title>
   </head>
 
@@ -28,17 +34,143 @@
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
 		  
-		  <div>
+	<div>
+        
+    <div id="mapid" style="width: 1200px; height: 800px;"></div>
+
+  <h3>table</h3>
+
+  <table id="point_table">
+       <thead> 
+            <tr>Name</tr>  
+            <tr>Level</tr>      
+       </thead>
+        
+</table>
 
 
-  <div id="mapid" style="width: 800px; height: 800px;">></div>
+     </div>
 
 
-
+   
 	<script>
 
 		// #mapid { height: 180px; }
 		var mymap = L.map('mapid').setView([-43.54186, 172.65418], 17);
+		
+		var points = [{
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    172.6561355078316,
+                    -43.54203404972386
+                ]
+            },
+            "properties": {
+                "name": "Measurement A",
+                "show_on_map": true,
+                "level": 70
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    172.6547380499906,
+                    -43.54090102293466,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "House",
+                "show_on_map": true,
+                "level": 72
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    172.6558400736101,
+                    -43.54274777471802,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Measurement B",
+                "show_on_map": true,
+                "level": 67
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    172.6605895855157,
+                    -43.54194927945454,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "XYZ",
+                "show_on_map": true,
+                "level": 44
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    172.6551905797899,
+                    -43.5441247366958,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Measurement C",
+                "show_on_map": true,
+                "level": 55
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    172.656077618415,
+                    -43.54115334506932,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Measurement A",
+                "show_on_map": true,
+                "level": 70
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    172.6555475527581,
+                    -43.54323249405933,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Measurement X",
+                "show_on_map": true,
+                "level": 22
+            }
+        }
+    ]
+	
 
 		L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
 		    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
@@ -46,7 +178,25 @@
 		    id: 'mapbox.satellite',
 		    accessToken: 'pk.eyJ1IjoibWpzbWl0aCIsImEiOiJjajY2dnJqZXIwMGNhMndsbXhqZThlbHc5In0.sHh3P7jETg36RN0HHbj5zA'
 		}).addTo(mymap);
+		
+		
+		L.geoJSON(points, {
+            filter: function(feature, layer) {
+                return feature.properties.show_on_map;
+            }
+        }).addTo(mymap);
+	
 
+$(document).ready(function() {
+    $('#point_table').DataTable( {
+        data: points,
+        columns: [
+            {   data: "properties.name"} ,
+            {    data: "properties.level" }
+        ]
+    } );
+} );
+	
 	</script>
 </div>
 	</section>
@@ -58,8 +208,6 @@
         <p><c> 2015 Michael Smith</p>
       </footer>
     </div>
-
-    
 
   </body>
 </html>
